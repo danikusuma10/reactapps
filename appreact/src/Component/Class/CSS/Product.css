@@ -1,0 +1,13 @@
+.box-stock {
+    width: 250px;
+    display: inline-block;
+    height: auto;
+    border: 5px solid #381717;
+    padding: 10px;
+    margin: 10px;
+}
+
+.box-stock img {
+    width: 200px;
+    height:200px;
+}
