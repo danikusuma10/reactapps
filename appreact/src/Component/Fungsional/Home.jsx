@@ -25,7 +25,7 @@ const Home = () => {
                judul="Robotic"
                summary="tentang jnahsuy sgdyajsgd sa hdas is"
           />
-          
+
           <Blog
 
                tanggal="8 Maret 2020"
@@ -34,8 +34,28 @@ const Home = () => {
 
           />
 
-          <h1>BUY SOMR PRODUCTS</h1>
-          <Product/>
+          <h2>BUY SOMR PRODUCTS</h2>
+          <Product
+               nama="SAPI HUTAN 2020"
+               stock="89"
+               harga="12000.000"
+          />
+          <Product
+               nama="MACAN KUMBANG"
+               stock="40"
+               harga="422000.000"
+          />
+          <Product
+               nama="KUCING ANGGORA"
+               stock="22"
+               harga="52000.000"
+          />
+          <Product
+               nama="ULAR BERBISA 2020"
+               stock="12"
+               harga="22000.000"
+          />
+
 
 
      </div>
