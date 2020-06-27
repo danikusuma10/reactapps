@@ -5,15 +5,28 @@ import React from 'react';
 //import './App.css';
 //import Home from './Component/Fungsional/Home';
 //import Beranda from './Component/Class/Beranda';
-import BootstrapComp from './Component/Class/BootstrapComp';
+//import BootstrapComp from './Component/Class/BootstrapComp';
+import NavbarCom from './Component/Fungsional/NavbarCom';
+import {BrowserRouter,Route,Switch} from 'react-router-dom';
+import HomePage from './Component/Fungsional/HomePage';
+import About from './Component/Fungsional/AboutCom';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
+    <BrowserRouter>
+
+    <NavbarCom/>
+
+    <Switch>
+      <Route exact path="/" component={HomePage}/>
+      <Route exact path="/about" component={About}/>
+    </Switch>
+
+    </BrowserRouter>
    
-   <BootstrapComp/>
-  
-      </div>
+
+   
   );
 }
 
