@@ -30,12 +30,29 @@ const NavbarCom = (props) =>{
                     <Collapse isOpen={isOpen} navbar>
                         <Nav className="mr-auto" navbar>
                             <NavItem>
-                                <NavLink href="/">Home</NavLink>
+                                <NavLink href="/">Beranda</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/about">About</NavLink>
+                                <NavLink href="/aturan">Aturan</NavLink>
                             </NavItem>
-                          
+                            <NavItem>
+                                <NavLink href="/jadwal">Jadwal</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/lokasi">Lokasi</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/alur">Alur</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/pendaftaran">Pendaftaran</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/rank">Rank</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/statistik">Statistik</NavLink>
+                            </NavItem>
                         </Nav>
                         <NavbarText>Simple Text</NavbarText>
                     </Collapse>
