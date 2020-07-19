@@ -1,12 +1,14 @@
 import React from 'react'
 import { Jumbotron, Button } from 'reactstrap';
 
-export default function About () {
+
+function Tentang() {
     return (
+        
         <div>
 <Jumbotron>
-<h1 className="About Us">Nama : Dani </h1>
-    <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
+<h1 className="About Us">UAS </h1>
+    <p className="lead">Nama = Dani Alfida Kusuma </p>
     <hr className="my-2" />
     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
     <p className="lead">
@@ -15,4 +17,8 @@ export default function About () {
 </Jumbotron >
         </div>
     )
-}
+        
+    }
+    
+
+export default Tentang

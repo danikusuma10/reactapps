@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 
-import './CSS/Product.css';
+import './CSS/Aturan.css';
 class Product extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            stock: this.props.stock,
+            stock: this.props.aturan,
             sub: "Beli",
             status: "Tersedia",
             disabled : false

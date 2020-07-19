@@ -11,27 +11,25 @@ import {
     //DropdownToggle,
     //DropdownMenu,
     //DropdownItem,
-    NavbarText
+    NavbarText,
+    
+    
 } from 'reactstrap';
 
 
-const NavbarCom = (props) =>{ 
+const NavbarCom = () =>{ 
 
-
-      
         const [isOpen, setIsOpen] = useState(false);
         const toggle = () => setIsOpen(!isOpen);
 
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand href="/">reactstrap</NavbarBrand>
+                    <NavbarBrand href="/home">PPDB JATENG</NavbarBrand>
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
                         <Nav className="mr-auto" navbar>
-                            <NavItem>
-                                <NavLink href="/">Beranda</NavLink>
-                            </NavItem>
+                            
                             <NavItem>
                                 <NavLink href="/aturan">Aturan</NavLink>
                             </NavItem>
@@ -53,6 +51,9 @@ const NavbarCom = (props) =>{
                             <NavItem>
                                 <NavLink href="/statistik">Statistik</NavLink>
                             </NavItem>
+                            <NavItem>
+                                <NavLink href="/tentang">Tentang</NavLink>
+                            </NavItem>
                         </Nav>
                         <NavbarText>Simple Text</NavbarText>
                     </Collapse>
@@ -61,4 +62,7 @@ const NavbarCom = (props) =>{
         )
     
 }
+//carousel
+
+
 export default NavbarCom;
