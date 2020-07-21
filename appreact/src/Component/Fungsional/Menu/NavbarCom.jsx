@@ -29,7 +29,9 @@ const NavbarCom = () =>{
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
                         <Nav className="mr-auto" navbar>
-                            
+                        <NavItem>
+                                <NavLink href="/prodi">Prodi</NavLink>
+                            </NavItem>
                             <NavItem>
                                 <NavLink href="/aturan">Aturan</NavLink>
                             </NavItem>
