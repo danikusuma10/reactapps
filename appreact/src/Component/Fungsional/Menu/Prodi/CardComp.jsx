@@ -20,7 +20,8 @@ function CardComp(props) {
                                 pathname: '/detail/${props.id}',
                                 state: {
                                     judul: props.judul,
-                                    tanggal: props.tanggal
+                                    tanggal: props.tanggal,
+                                    detail: props.detail
                                 }
                             }
                         }>Detail</Link>
