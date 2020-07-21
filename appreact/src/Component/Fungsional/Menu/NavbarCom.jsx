@@ -25,7 +25,7 @@ const NavbarCom = () =>{
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand href="/home">PPDB JATENG</NavbarBrand>
+                    <NavbarBrand href="/home">SMK N 31 SEMARANG</NavbarBrand>
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
                         <Nav className="mr-auto" navbar>

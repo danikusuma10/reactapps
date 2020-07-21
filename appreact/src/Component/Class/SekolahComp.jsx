@@ -1,7 +1,7 @@
 import React from 'react'
 import './CSS/Blog.css';
 
-const Blog = (props) => {
+const SekolahComp = (props) => {
     return <div className="blog-wrap">
         <img src={props.Link} alt=""/>
         <p>{props.Tanggal}</p>
@@ -10,4 +10,4 @@ const Blog = (props) => {
     </div>
 }
 
-export default Blog;
+export default SekolahComp;
