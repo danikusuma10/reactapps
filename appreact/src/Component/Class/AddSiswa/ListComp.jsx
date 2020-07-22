@@ -1,13 +1,14 @@
-import React, {PureComponent } from 'react'
+import React, { PureComponent } from 'react';
 import axios from 'axios'
 import qs from 'querystring'
 import {Table, Button, Container, NavLink, Alert} from 'reactstrap'
 
-const api = 'http://localhost:3001'
+const api  = 'http://localhost:3001'
 
-class Rank extends PureComponent {
+class ListComp extends PureComponent {
     constructor(props) {
-        super (props)
+        super(props)
+
         this.state = {
             siswa: [],
             response: '',
@@ -15,15 +16,15 @@ class Rank extends PureComponent {
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         axios.get(api+'/tampil').then(res=>{
             this.setState({
-                siswa: res.data.values 
+                siswa: res.data.values
             })
         })
     }
 
-    render () {
+    render() {
         return (
             <Container>
                 <h2>Data siswa</h2>
@@ -43,16 +44,15 @@ class Rank extends PureComponent {
                                 <td>{siswa.nis}</td>
                                 <td>{siswa.nama}</td>
                                 <td>{siswa.jurusan}</td>
-                                <td>Edit | Hapus</td>
+                                <td>Edit | Hapus</td> 
                             </tr>
 
                             )}
                     </tbody>
-
                 </Table>
             </Container>
-        )
+        );
     }
-} 
+}
 
-export default Rank; 
+export default ListComp; 

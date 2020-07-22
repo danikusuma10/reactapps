@@ -46,6 +46,7 @@ const NavbarCom = () =>{
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/pendaftaran">Pendaftaran</NavLink>
+                                <NavLink href="/siswa">Siswa</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/rank">Rank</NavLink>

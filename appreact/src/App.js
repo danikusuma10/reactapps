@@ -14,14 +14,19 @@ import Aturan from './Component/Fungsional/Menu/Aturan';
 import Jadwal from './Component/Fungsional/Menu/Jadwal';
 import Lokasi from './Component/Fungsional/Menu/Lokasi';
 import Alur from './Component/Fungsional/Menu/Alur';
-import Pendaftaran from './Component/Fungsional/Menu/Pendaftaran';
+import Pendaftaran from './Component/Fungsional/Menu/Pendaftaran/Pendaftaran';
 import Rank from './Component/Fungsional/Menu/Rank';
 import Statistik from './Component/Fungsional/Menu/Statistik';
 import Tentang from './Component/Fungsional/Menu/Tentang';
-
+//Prodi
 import DetailComp from './Component/Fungsional/Menu/Prodi/DetailComp';
 import AboutComp from './Component/Fungsional/Menu/Prodi/AboutComp';
 import Profile from './Component/Fungsional/Menu/Prodi/Profile';
+//tambah siswa
+import ListComp from './Component/Class/AddSiswa/ListComp';
+import TambahComp from './Component/Fungsional/SMA/TambahComp';
+
+
 
 const App = () => {
   return (
@@ -42,10 +47,15 @@ const App = () => {
       <Route exact path="/rank" component={Rank}/>
       <Route exact path="/statistik" component={Statistik}/>
       <Route exact path="/tentang" component={Tentang}/>
-   
+   //Prodi
         <Route exact path="/About" component={AboutComp} />
         <Route exact path="/Profile" component={Profile} />
         <Route exact path="/detail/:id" component={DetailComp} />
+
+      //*Tambah Siswa*//
+      <Route exact path="/siswa" component={ListComp} />
+      <Route exact path="/siswa/tambah" component={TambahComp} />
+     
     </Switch>
     
     </BrowserRouter>
