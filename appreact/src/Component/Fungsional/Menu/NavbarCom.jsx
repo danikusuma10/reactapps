@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
 import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-   // UncontrolledDropdown,
-    //DropdownToggle,
-    //DropdownMenu,
-    //DropdownItem,
-    NavbarText,
-    
-    
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText
 } from 'reactstrap';
-
 
 const NavbarCom = () =>{ 
 
@@ -29,43 +26,61 @@ const NavbarCom = () =>{
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
                         <Nav className="mr-auto" navbar>
-                        <NavItem>
-                                <NavLink href="/prodi">Prodi</NavLink>
+
+           <NavItem>
+                                <NavLink href="/prodi">PRODI</NavLink>
+           </NavItem>
+             <NavItem>
+                                <NavLink href="/aturan">ATURAN</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/aturan">Aturan</NavLink>
+                                <NavLink href="/jadwal">JADWAL</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/jadwal">Jadwal</NavLink>
+                                <NavLink href="/lokasi">LOKASI</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/lokasi">Lokasi</NavLink>
+                                <NavLink href="/alur">ALUR</NavLink>
+                            </NavItem>
+                        
+
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Siswa
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>
+
+                   <NavItem>
+                            <NavLink href="/siswa">DAFTAR SISWA</NavLink>
+                            </NavItem>
+                </DropdownItem>
+
+                <DropdownItem>
+                   <NavItem>
+                            <NavLink href="/siswa/tambah">TAMBAH SISWA</NavLink>
+                            </NavItem>
+               
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+               <NavItem>
+                                <NavLink href="/rank">RANK</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/alur">Alur</NavLink>
+                                <NavLink href="/statistik">STATISTIK</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/pendaftaran">Pendaftaran</NavLink>
-                                <NavLink href="/siswa">Siswa</NavLink>
+                                <NavLink href="/tentang">TENTANG</NavLink>
                             </NavItem>
-                            <NavItem>
-                                <NavLink href="/rank">Rank</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/statistik">Statistik</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/tentang">Tentang</NavLink>
-                            </NavItem>
-                        </Nav>
-                        <NavbarText>Simple Text</NavbarText>
-                    </Collapse>
-                </Navbar>
-            </div>
-        )
-    
+                   
+                
+          </Nav>
+          <NavbarText>LOGIN / REGISTER</NavbarText>
+        </Collapse>
+      </Navbar>
+    </div>
+  );
 }
-//carousel
 
-
-export default NavbarCom;
+export default NavbarCom

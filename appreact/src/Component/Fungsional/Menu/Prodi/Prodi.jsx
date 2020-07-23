@@ -37,14 +37,9 @@ function Prodi() {
 
                         <Col>
                             <CardComp id="3"
-                                judul="Teknik Jaringan"
-                                tanggal="26/06/2020" 
-                                detail="Merupakan Teknik Jaringan yanng terbaik"/>
-                        </Col>
                     </Row>
                 </Container>
             </Container>
-        </div>)
 }
 
 export default Prodi

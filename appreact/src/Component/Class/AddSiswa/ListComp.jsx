@@ -1,9 +1,11 @@
 import React, { PureComponent } from 'react';
 import axios from 'axios'
 import qs from 'querystring'
-import {Table, Button, Container, NavLink, Alert} from 'reactstrap'
+import { Table, Button, Container, NavLink, Alert } from 'reactstrap'
+import { Link } from 'react-router-dom'
+import { type } from 'os'
 
-const api  = 'http://localhost:3001'
+const api = 'http://localhost:3001'
 
 class ListComp extends PureComponent {
     constructor(props) {
@@ -17,7 +19,7 @@ class ListComp extends PureComponent {
     }
 
     componentDidMount() {
-        axios.get(api+'/tampil').then(res=>{
+        axios.get(api + '/tampil').then(res => {
             this.setState({
                 siswa: res.data.values
             })
@@ -28,26 +30,43 @@ class ListComp extends PureComponent {
         return (
             <Container>
                 <h2>Data siswa</h2>
-                <hr/>
+                <hr />
                 <Table className="table-bordered">
                     <thead>
                         <tr>
+
                             <th>NIS</th>
                             <th>Nama</th>
                             <th>Jurusan</th>
-                            <th>Aksi</th>
+                            <th>Opsi</th>
                         </tr>
                     </thead>
                     <tbody>
                         {this.state.siswa.map(siswa =>
+
                             <tr key={siswa.id_siswa}>
-                                <td>{siswa.nis}</td>
+                                <td>{siswa.nim}</td>
                                 <td>{siswa.nama}</td>
                                 <td>{siswa.jurusan}</td>
-                                <td>Edit | Hapus</td> 
-                            </tr>
+                                <td>
+                                    <Link to=
+                                        {
+                                            {
+                                                pathname: '/siswa/edit',
+                                                state: {
+                                                    id_siswa: siswa.id_siswa,
+                                                    nim: siswa.nim,
+                                                    nama: siswa.nama,
+                                                    jurusan: siswa.jurusan
+                                                }
+                                            }
+                                        }>
+                                        <Button> Edit </Button>
 
-                            )}
+                                    </Link>
+                                </td>
+                            </tr>
+                        )}
                     </tbody>
                 </Table>
             </Container>
