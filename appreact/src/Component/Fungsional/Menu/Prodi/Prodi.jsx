@@ -4,6 +4,7 @@ import CardComp from './CardComp';
 
 function Prodi() {
     return (
+
         <div>
 
             <Container>
@@ -15,8 +16,7 @@ function Prodi() {
                         Tujuan Kompetensi Keahlian Desain Pemodelan dan Informasi Bangunan adalah membekali peserta didik dengan keterampilan, pengetahuan dan sikap agar kompeten:
                         Melakukan pekerjaan sebagai Drafter/Juru Gambar dalam pekerjaan perencanaan bangunan
                         Melakukan pekerjaan sebagai Drafter/Juru Gambar dalam pekerjaan pelaksanaan bangunan
-                        Melakukan pekerjaan jasa penggambaran bangunan secara mandiri / berwirausaha di Studio Gambar
-</p>
+                        Melakukan pekerjaan jasa penggambaran bangunan secara mandiri / berwirausaha di Studio Gambar</p>
 
                 </Jumbotron>
                 <Container>
@@ -24,8 +24,8 @@ function Prodi() {
                         <Col>
                             <CardComp id="1"
                                 judul="Teknik Komputer"
-                                tanggal="24/06/2020" 
-                                detail="Merupakan Teknik Komputer yanng terbaik"/>
+                                tanggal="24/06/2020"
+                                detail="Merupakan Teknik Komputer yanng terbaik" />
                         </Col>
 
                         <Col>
@@ -37,9 +37,16 @@ function Prodi() {
 
                         <Col>
                             <CardComp id="3"
+                                judul="Teknik Jaringan"
+                                tanggal="25/06/2020"
+                                detail="Merupakan Teknik Jaringan yanng terbaik" />
+                        </Col>
                     </Row>
                 </Container>
             </Container>
-}
+            
+               
+    </div>)}
+
 
 export default Prodi
