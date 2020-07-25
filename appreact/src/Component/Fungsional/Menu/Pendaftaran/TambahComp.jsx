@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import { Container, Col, Form, Alert, FormGroup, Label, Input, Button } from 'reactstrap';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
+import ListComp from './../../../Class/AddSiswa/ListComp';
 
 const api = 'http://localhost:3001'
 
@@ -90,8 +91,10 @@ class TambahComp extends PureComponent {
                 </Form>
             </Container>
 
+
         )
     }
+    
 }
-
+<ListComp/>
 export default TambahComp

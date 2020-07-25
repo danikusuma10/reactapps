@@ -8,6 +8,43 @@ import { Container, Row } from 'reactstrap';
 
 const qs = require('querystring')
 const api = 'http://localhost:3001'
+
+
+
+const initialState = {
+    isAuthenticated: false,
+    user: null,
+    token: null
+  }
+  
+  
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "LOGIN":
+        localStorage.setItem("user", JSON.stringify[action.payload.user])
+        localStorage.setItem("token", JSON.stringify[action.payload.token])
+        return {
+          ...state,
+          isAuthenticated: true,
+          user: action.payload.user
+        }
+      case "LOGOUT":
+        localStorage.clear()
+        return {
+          ...state,
+          isAuthenticated: false,
+          user: action.payload.user
+        }
+      default:
+        return state
+  
+    }
+  }
+  
+  
+
+
+
 function LoginComp() {
     const { dispatch } = useContext(AuthContext)
 
