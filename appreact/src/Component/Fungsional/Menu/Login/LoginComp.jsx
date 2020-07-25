@@ -3,54 +3,19 @@ import { Button, Form, FormGroup, Label, Col, Input,  CardImg } from 'reactstrap
 
 import axios from 'axios'
 import { useContext } from 'react';
-import { AuthContext } from '../../App';
+import { AuthContext } from '../../../../App';
 import { Container, Row } from 'reactstrap';
 
 const qs = require('querystring')
 const api = 'http://localhost:3001'
 
 
-
-const initialState = {
-    isAuthenticated: false,
-    user: null,
-    token: null
-  }
-  
-  
-  const reducer = (state, action) => {
-    switch (action.type) {
-      case "LOGIN":
-        localStorage.setItem("user", JSON.stringify[action.payload.user])
-        localStorage.setItem("token", JSON.stringify[action.payload.token])
-        return {
-          ...state,
-          isAuthenticated: true,
-          user: action.payload.user
-        }
-      case "LOGOUT":
-        localStorage.clear()
-        return {
-          ...state,
-          isAuthenticated: false,
-          user: action.payload.user
-        }
-      default:
-        return state
-  
-    }
-  }
-  
-  
-
-
-
 function LoginComp() {
     const { dispatch } = useContext(AuthContext)
 
     const initialState = {
-        email: "",
-        password: "",
+        email: " ",
+        password: " ",
         isSubmitting: false,
         errorMessage: null
     }
@@ -58,11 +23,12 @@ function LoginComp() {
     const [data, setData] = useState(initialState)
 
     const handleInputChange = event => {
-         setData({
+        setData({
             ...data,
             [event.target.name]: event.target.value
         })
     }
+
     const handleformSubmit = event => {
         event.preventDefault()
         setData({
@@ -80,7 +46,7 @@ function LoginComp() {
             }
         }
         axios.post(api + '/auth/api/v1/login', qs.stringify(requestBody), config)
-            .then(res=>{
+            .then(res => {
                 if (res.data.success === true) {
                     dispatch({
                         type: "LOGIN",
@@ -97,6 +63,7 @@ function LoginComp() {
                 }
                 throw res
             })
+    
     }
     return (
         <Fragment>
@@ -104,7 +71,7 @@ function LoginComp() {
             <br />
             <Row>
                 <Col>
-                    <CardImg width="100" src="https://upload.wikimedia.org/wikipedia/en/1/18/SIP_Animation.png" />
+                    <CardImg width="100" src="https://smpn31semarang.sch.id/wp-content/uploads/2018/06/IMG_5926-FILEminimizer-768x512.jpg" />
                 </Col>
                 <Col>
 

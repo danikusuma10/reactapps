@@ -51,7 +51,15 @@ const NavbarCom = () => {
               <DropdownMenu right>
                 <DropdownItem>
 
-                
+                  <NavItem>
+                    <NavLink href="/siswa">DAFTAR SISWA</NavLink>
+                  </NavItem>
+                </DropdownItem>
+
+                <DropdownItem>
+                  <NavItem>
+                    <NavLink href="/siswa/tambah">TAMBAH SISWA</NavLink>
+                  </NavItem>
 
                 </DropdownItem>
               </DropdownMenu>
