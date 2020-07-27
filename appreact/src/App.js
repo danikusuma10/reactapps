@@ -77,7 +77,7 @@ function App () {
           {!state.isAuthenticated ?
             <Redirect
               to={{
-                pathname: ""
+                pathname: "/login"
               }}
             /> :
             <Redirect
